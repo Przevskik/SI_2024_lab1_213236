@@ -1,0 +1,64 @@
+4.git init
+
+5.git remote add origin https://github.com/Przevskik/SI_2024_lab1_213236.git
+ 
+6.notepad README.md
+  git add .
+  git commit -m "Initial commit"
+
+7.git add SILab1Main.java
+  git add SILab1_1.java
+  git add SILab1_2.java
+  git commit -m "Add starter code" 
+
+8.git push origin --all
+
+9.git branch bug1
+  git branch bug2
+
+10.git checkout bug1
+
+11.Грешката е поправена па потоа имаме:
+   git add SILab1_1.java
+   git commit -m "Fix wrong condition in filterOddLengthStrings"	
+
+12.git checkout bug2
+
+13.Повторно грешката е поправена и во другиот фајл, па имаме:
+   git add SILab1_2.java
+   git commit -m "Fix wrong condition in makeBigStringFrom"
+
+14.git checkout bug1
+
+15.Во SILab1Main ја додаваме потребната линија код па имаме:
+   git add SILab1Main.java
+   git commit -m "Call method filterOddLengthStrings in main class"
+
+16.git checkout bug2
+
+17.Во SILab1Main ја додаваме потребната линија код па имаме:
+   git add SILab1Main.java
+   git commit -m "Call method makeBigStringFrom in main class"
+
+18.git push origin --all
+
+19.git checkout master
+
+20.git merge bug1
+
+21.git push origin --all
+
+22.git checkout bug2
+
+23.git rebase master //Тука се јавува конфликт поради кодот во линија 16 (различен во двете гранки), кој треба мануелно да се реши, па откако е решен имаме:
+   git add SILab1Main.java
+   git rebase --continue //rebase завршува
+
+24.git checkout master
+
+25.git merge bug2
+
+26.git push origin --all //Тука јавува грешка за гранката bug2, па затоа правиме force push во чекор 27
+   
+27.git push origin bug2 --force
+
